@@ -1,12 +1,15 @@
 #pragma once
 
-#include "SFML/Window.hpp"
-#include "SFML/Graphics.hpp"
+#include "Player.h"
+#include <SFML/Graphics.hpp>
 
-
-class Movement : public sf::Window, public sf::Shape
-{
+class Movement {
 public:
-	static void movementCharacter();
-};
+    Movement(Player& player);
 
+    void movementCharacter(sf::RenderWindow& window);
+
+private:
+    Player& player;
+    float movementSpeed = 5.0f;
+};

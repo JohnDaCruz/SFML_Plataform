@@ -22,6 +22,4 @@ public:
 private:
     sf::RectangleShape mapShape;
     sf::Color mapColor;
-    float mapPositionX;
-    float mapPositionY;
 };
